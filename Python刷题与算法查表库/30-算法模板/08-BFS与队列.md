@@ -1,5 +1,3 @@
-# BFS 与队列
-
 **快速结论**
 BFS 一层一层扩展，第一次到达目标通常就是最短步数。
 
@@ -10,6 +8,7 @@ BFS 一层一层扩展，第一次到达目标通常就是最短步数。
 - 每一步代价相同的状态转换。
 
 **标准模板**
+
 ```python
 from collections import deque
 
@@ -27,9 +26,11 @@ while q:
             continue
         seen.add(nxt)
         q.append((nxt, step + 1))
+
 ```
 
 **网格 BFS 模板**
+
 ```python
 from collections import deque
 
@@ -45,6 +46,7 @@ while q:
             if (nr, nc) not in seen:
                 seen.add((nr, nc))
                 q.append((nr, nc, step + 1))
+
 ```
 
 **常见变体**
