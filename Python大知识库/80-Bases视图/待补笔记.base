@@ -1,0 +1,25 @@
+filters:
+  and:
+    - file.inFolder("Python大知识库")
+    - 'file.ext == "md"'
+    - 'status != "常用"'
+properties:
+  file.name:
+    displayName: 笔记
+  area:
+    displayName: 区域
+  kind:
+    displayName: 类型
+  status:
+    displayName: 状态
+  priority:
+    displayName: 优先级
+views:
+  - type: table
+    name: 待补与待维护
+    order:
+      - file.name
+      - area
+      - kind
+      - status
+      - priority
