@@ -1,196 +1,225 @@
 ---
 created: 2026-06-08
-type: deep-note
-source: DataStructure.pdf pages 5-18
-tags: [Python, 数据结构, 线性表, list, 链表]
+updated: 2026-06-08
+type: pdf-like-note
+source: DataStructure.pdf P5-P18
+tags: [Python, 数据结构, 线性表]
 ---
 
-# 线性表：Python list 与链表节点
+# 1. 线性表（Linear List）
 
-原 PDF 对应页：DataStructure.pdf 第 5-18 页。原文从顺序表、单链表、循环链表、双向链表讲起，C 语言重点是数组地址、结构体指针和 malloc。Python 版要抓住更核心的东西：线性表就是“一排元素”，区别只在于“能不能直接按下标跳过去”。
+**原 PDF 页码：** DataStructure.pdf P5-P18
 
-![单链表原图](../assets/data_structure/data_structure_p009_01.png)
+## 1.1 原 PDF 小节
 
-## 一句话抓本质
+- 宏定义 define.h
+- 顺序表 Sequence List：初始化、获取元素、查找元素、插入、删除、销毁、清空、判空
+- 单链表 Single Linked List：头插法、尾插法、获取、查找、插入、删除
+- 循环链表 Circular Linked List
+- 双向链表 Double Linked List
+- 线性表玩具：线性表合并、有序表合并、多项式创建与相加
 
-线性表关心的是元素之间的前后关系；Python list 适合随机访问，链表适合练“节点指向下一个节点”的思维。
+## 1.2 顺序表定义
 
-## Python 里的顺序表
+线性表是由 n 个数据元素组成的有限序列：
 
-Python 的 list 可以直接当顺序表用：
+$$
+L=(a_1,a_2,\cdots,a_n)
+$$
+
+顺序表要求逻辑上相邻的元素，物理存储位置也相邻。原 PDF 中顺序表的地址公式是：
+
+$$
+LOC(a_i)=LOC(a_1)+(i-1)\times l
+$$
+
+其中 l 表示每个元素占用的存储单元长度。Python 中的 list 可以看作顺序表的常用实现。
 
 ```python
-nums = [10, 20, 30, 40]
-print(nums[2])       # 30，按下标访问
-nums.insert(1, 15)   # [10, 15, 20, 30, 40]
-nums.pop(3)          # 删除下标 3 的元素 30
-print(nums)
+a = [12, 25, 37, 49]
+print(a[2])       # 获取第 3 个逻辑元素：37
+print(a.index(25))
+a.insert(2, 30)   # 在下标 2 插入
+print(a)
+a.pop(1)          # 删除下标 1
+print(a)
 ```
 
-变量角色：
+## 1.3 顺序表查找与 ASL
 
-| 变量 | 角色 | 常见错误 |
-|---|---|---|
-| nums | 顺序表本体 | 把它当成固定长度数组，忘了 Python 会自动扩容 |
-| i | 下标 | 把第 i 个元素和下标 i 混在一起 |
-| value | 要插入或查找的值 | 查值和查位置不是一回事 |
+如果从头到尾查找，第 i 个元素被找到需要比较 i 次。平均查找长度：
 
-## 顺序表的插入为什么慢
+$$
+ASL=\sum_{i=1}^{n}P_iC_i
+$$
 
-在中间插入一个元素，后面的元素要整体右移。
+若每个元素查找概率相等：
 
-例子：在下标 1 插入 15。
+$$
+P_i=\frac{1}{n},\quad C_i=i
+$$
 
-| 步骤 | list 状态 | 发生了什么 |
-|---|---|---|
-| 初始 | [10, 20, 30, 40] | 20 在下标 1 |
-| 腾位置 | [10, _, 20, 30, 40] | 20、30、40 逻辑上后移 |
-| 放入 | [10, 15, 20, 30, 40] | 15 放进下标 1 |
+则：
 
-所以中间插入/删除是 O(n)，末尾 append 通常是 O(1)。
+$$
+ASL=\frac{1}{n}\sum_{i=1}^{n}i=\frac{n+1}{2}
+$$
 
-## 单链表节点
+Python 复现：
 
-链表没有连续下标，每个节点只知道下一个节点是谁。
+```python
+def locate_elem(seq: list[int], target: int) -> int:
+    for i, value in enumerate(seq):
+        if value == target:
+            return i
+    return -1
+```
+
+## 1.4 顺序表插入与删除
+
+顺序表在中间插入元素时，需要移动后面的元素。插入到第 i 个位置，平均移动次数约为：
+
+$$
+E_{insert}=\frac{n}{2}
+$$
+
+删除第 i 个位置，平均移动次数约为：
+
+$$
+E_{delete}=\frac{n-1}{2}
+$$
+
+Python list.insert() 和 list.pop(index) 已经封装了移动过程，但复杂度仍是 O(n)。
+
+## 1.5 单链表
+
+原 PDF 图示：
+
+![单链表图示](../assets/data_structure/data_structure_p009_01.png)
+
+链表节点由“数据域 + 指针域”组成。C 中是 data 和 next，Python 中写成对象属性。
 
 ```python
 from dataclasses import dataclass
 
 @dataclass
 class ListNode:
-    val: int
+    data: int
     next: "ListNode | None" = None
 
-def build_linked_list(values: list[int]) -> ListNode | None:
-    dummy = ListNode(0)
-    tail = dummy
-    for x in values:
-        tail.next = ListNode(x)
+def create_by_tail(values: list[int]) -> ListNode | None:
+    head = ListNode(0)     # 头结点，不存真实数据
+    tail = head
+    for value in values:
+        tail.next = ListNode(value)
         tail = tail.next
-    return dummy.next
+    return head.next
 
 def to_list(head: ListNode | None) -> list[int]:
     ans = []
-    cur = head
-    while cur is not None:
-        ans.append(cur.val)
-        cur = cur.next
+    p = head
+    while p is not None:
+        ans.append(p.data)
+        p = p.next
     return ans
-
-head = build_linked_list([10, 20, 30])
-print(to_list(head))
 ```
 
-这里 dummy 是虚拟头节点。它的作用不是存数据，而是让“插到头部”和“插到中间”统一成同一种写法。
+### 头插法与尾插法
 
-## 链表插入
-
-在第 index 个位置前插入 value。index 从 0 开始。
-
-```python
-from dataclasses import dataclass
-
-@dataclass
-class ListNode:
-    val: int
-    next: "ListNode | None" = None
-
-def insert_at(head: ListNode | None, index: int, value: int) -> ListNode | None:
-    if index < 0:
-        raise IndexError("index must be non-negative")
-    dummy = ListNode(0, head)
-    prev = dummy
-    for _ in range(index):
-        if prev.next is None:
-            raise IndexError("index out of range")
-        prev = prev.next
-    prev.next = ListNode(value, prev.next)
-    return dummy.next
-```
-
-手推：head = 10 -> 20 -> 30，在 index = 1 插入 15。
-
-| 步骤 | prev 指向 | prev.next 指向 | 动作 |
+| 建表方法 | 原 PDF 含义 | Python 现象 | 结果顺序 |
 |---|---|---|---|
-| 初始 | dummy | 10 | 准备走到插入点前一个节点 |
-| 走 1 步 | 10 | 20 | prev 正好在 index 前面 |
-| 改指针 | 10 | 15 | 新节点 next 指向原来的 20 |
-| 结果 | 10 | 15 -> 20 -> 30 | 链接完成 |
+| 头插法 | 新节点插到头结点后面 | 每次让新节点指向旧头 | 与输入相反 |
+| 尾插法 | 新节点接到尾节点后面 | 用 tail 维护尾部 | 与输入相同 |
 
-## 链表删除
-
-删除第 index 个节点。
+头插法 Python 复现：
 
 ```python
 from dataclasses import dataclass
 
 @dataclass
 class ListNode:
-    val: int
+    data: int
     next: "ListNode | None" = None
 
-def delete_at(head: ListNode | None, index: int) -> ListNode | None:
-    if index < 0:
-        raise IndexError("index must be non-negative")
-    dummy = ListNode(0, head)
-    prev = dummy
-    for _ in range(index):
-        if prev.next is None:
-            raise IndexError("index out of range")
-        prev = prev.next
-    if prev.next is None:
-        raise IndexError("index out of range")
-    prev.next = prev.next.next
-    return dummy.next
+def create_by_head(values: list[int]) -> ListNode | None:
+    head = ListNode(0)
+    for value in values:
+        node = ListNode(value)
+        node.next = head.next
+        head.next = node
+    return head.next
 ```
 
-## C 写法到 Python 写法
+## 1.6 单链表插入删除
 
-| C 语言笔记 | Python 写法 | 你要理解的本质 |
-|---|---|---|
-| malloc 一个节点 | ListNode(value) | 创建一个节点对象 |
-| p->next | p.next | 找到下一个节点 |
-| 头指针 L | head 变量 | 链表入口 |
-| 头插法 | 新节点 next 指向原 head | 让新节点成为入口 |
-| 尾插法 | tail 一直指向最后节点 | 省去每次从头找尾巴 |
+插入的核心不是“移动元素”，而是改指针：
 
-## 常见错法
+$$
+node.next=p.next,\quad p.next=node
+$$
 
-错误 1：删除时让 cur 跳走，而不是让前一个节点跳过目标。
+删除的核心是让前驱节点跳过当前节点：
+
+$$
+p.next=p.next.next
+$$
 
 ```python
-def wrong_delete(cur):
-    cur = cur.next
-    return cur
+from dataclasses import dataclass
+
+@dataclass
+class ListNode:
+    data: int
+    next: "ListNode | None" = None
+
+def insert_after(p: ListNode, value: int) -> None:
+    node = ListNode(value)
+    node.next = p.next
+    p.next = node
+
+def delete_after(p: ListNode) -> None:
+    if p.next is not None:
+        p.next = p.next.next
 ```
 
-这只是改变了局部变量 cur，没有改变链表结构。真正要改的是 prev.next。
+## 1.7 循环链表与双向链表
 
-错误 2：不用 dummy，头节点删除要单独写很多分支。比赛里分支越多，越容易漏边界。
+循环链表：最后一个节点的 next 指向头结点或第一个节点。
 
-## 复杂度
+双向链表：每个节点同时保存前驱和后继。
 
-| 操作 | Python list | 单链表 |
+![双向链表图示](../assets/data_structure/data_structure_p014_01.png)
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class DoubleNode:
+    data: int
+    prev: "DoubleNode | None" = None
+    next: "DoubleNode | None" = None
+
+def link(a: DoubleNode, b: DoubleNode) -> None:
+    a.next = b
+    b.prev = a
+```
+
+## 1.8 复杂度表
+
+| 操作 | 顺序表 list | 单链表 |
 |---|---:|---:|
-| 访问第 i 个 | O(1) | O(n) |
-| 查找某个值 | O(n) | O(n) |
-| 已知位置后插入 | O(n)，要搬元素 | O(1)，改指针 |
-| 删除中间元素 | O(n)，要搬元素 | O(1)，改指针 |
+| 按下标访问 | O(1) | O(n) |
+| 查找值 | O(n) | O(n) |
+| 已知位置插入 | O(n) | O(1) |
+| 已知前驱删除 | O(n) | O(1) |
+| 额外空间 | 少 | 每个节点多一个指针 |
 
-注意：链表的 O(1) 插入删除成立的前提是“已经拿到前一个节点”。如果还要从头找，那整体仍然是 O(n)。
+## 1.9 Python 与原 C 代码的对应
 
-## 题目信号
-
-看到这些词，优先想到链表思维：
-
-- 删除倒数第 k 个节点。
-- 反转链表。
-- 合并两个有序链表。
-- 判断链表是否有环。
-- 题目给的是 ListNode，而不是数组。
-
-## 验收练习
-
-1. 用 dummy 写删除链表第一个值等于 target 的节点。
-2. 手推 1 -> 2 -> 3 反转成 3 -> 2 -> 1，每一步写出 prev、cur、nxt。
-3. 说清楚为什么 Python list 的 insert(0, x) 是 O(n)。
+| 原 PDF C 写法 | Python 复现 |
+|---|---|
+| Sqlist *L | list[int] 或封装类 |
+| L->base[i] | a[i] |
+| LinkList p | p: ListNode |
+| p->next | p.next |
+| malloc(sizeof(LNode)) | ListNode(value) |

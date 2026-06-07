@@ -1,72 +1,90 @@
 ---
 created: 2026-06-08
-type: deep-note
-source: DataStructure.pdf pages 79-86
-tags: [Python, 图, 最小生成树, Prim, Kruskal, 并查集]
+updated: 2026-06-08
+type: pdf-like-note
+source: DataStructure.pdf P79-P86
+tags: [Python, 最小生成树, Prim, Kruskal]
 ---
 
-# 最小生成树：Prim 与 Kruskal
+# 7. 最小生成树：Prim 与 Kruskal
 
-原 PDF 对应页：DataStructure.pdf 第 79-86 页。最小生成树只讨论“无向连通带权图”：要用最小总代价把所有点连起来，并且不能有环。
+**原 PDF 页码：** DataStructure.pdf P79-P86
 
-![Prim 原图](../assets/data_structure/data_structure_p080_01.png)
+## 7.1 原 PDF 小节
 
-## 一句话抓本质
+- Spanning Tree
+- Prim 算法：邻接矩阵、邻接表实现
+- Kruskal 算法：邻接矩阵、邻接表实现
 
-Prim 像“从一个岛慢慢扩张”，Kruskal 像“按边从小到大挑，只要不成环就要”。
+## 7.2 生成树与最小生成树
 
-## 最小生成树是什么
+连通无向图 G=(V,E) 的生成树包含全部顶点，且没有环。
 
-n 个点的生成树一定有 n - 1 条边。如果边少了，连不全；如果边多了，必有环。
+若顶点数为 n，生成树边数必为：
 
-| 目标 | 要求 |
-|---|---|
-| 连通所有点 | 每个点都在树里 |
-| 不成环 | 只有 n - 1 条边 |
-| 权值最小 | 所选边权值和最小 |
+$$
+|E_T|=n-1
+$$
 
-## Prim
+最小生成树满足：
+
+$$
+W(T)=\sum_{e\in T}w(e) \quad \text{最小}
+$$
+
+## 7.3 原 PDF 图示
+
+![Prim 图示](../assets/data_structure/data_structure_p080_01.png)
+
+## 7.4 Prim 算法
+
+Prim 从一个顶点开始，每次选一条从已选点集到未选点集的最小边。
+
+$$
+U \leftarrow U\cup \{v\}
+$$
+
+$$
+lowcost[x]=\min(lowcost[x],w(v,x))
+$$
+
+Python 用堆复现：
 
 ```python
 from heapq import heappop, heappush
 
 def prim(n: int, edges: list[tuple[int, int, int]]) -> int | None:
     graph = [[] for _ in range(n)]
-    for a, b, w in edges:
-        graph[a].append((w, b))
-        graph[b].append((w, a))
+    for u, v, w in edges:
+        graph[u].append((w, v))
+        graph[v].append((w, u))
 
     visited = [False] * n
     heap = [(0, 0)]
     total = 0
-    count = 0
-
-    while heap and count < n:
+    cnt = 0
+    while heap:
         w, u = heappop(heap)
         if visited[u]:
             continue
         visited[u] = True
         total += w
-        count += 1
+        cnt += 1
         for nw, v in graph[u]:
             if not visited[v]:
                 heappush(heap, (nw, v))
-
-    if count != n:
-        return None
-    return total
+    return total if cnt == n else None
 ```
 
-变量角色：
+## 7.5 Kruskal 算法
 
-| 变量 | 角色 |
-|---|---|
-| visited | 已经加入生成树的点集合 |
-| heap | 从树内连向树外的候选边 |
-| total | 当前总代价 |
-| count | 已加入多少个点 |
+Kruskal 按边权从小到大选边，只要不形成环就加入生成树。
 
-## Kruskal 与并查集
+并查集判断是否成环：
+
+$$
+find(u)=find(v) \Rightarrow u,v \text{ 已连通，加入会成环}
+$$
 
 ```python
 class DSU:
@@ -93,53 +111,17 @@ def kruskal(n: int, edges: list[tuple[int, int, int]]) -> int | None:
     dsu = DSU(n)
     total = 0
     used = 0
-    for a, b, w in sorted(edges, key=lambda x: x[2]):
-        if dsu.union(a, b):
+    for u, v, w in sorted(edges, key=lambda x: x[2]):
+        if dsu.union(u, v):
             total += w
             used += 1
-            if used == n - 1:
-                return total
-    return None
+    return total if used == n - 1 else None
 ```
 
-## 手推 Kruskal
+## 7.6 复杂度
 
-边：0-1(1)，1-2(2)，0-2(4)，2-3(3)
-
-| 顺序 | 边 | 是否选择 | 原因 |
-|---:|---|---|---|
-| 1 | 0-1(1) | 选 | 不成环 |
-| 2 | 1-2(2) | 选 | 不成环 |
-| 3 | 2-3(3) | 选 | 已连 4 点 |
-| 4 | 0-2(4) | 不看 | 已有 n-1 条边 |
-
-总权值 1 + 2 + 3 = 6。
-
-## Prim 和 Kruskal 怎么选
-
-| 算法 | 更像什么 | 适合 |
-|---|---|---|
-| Prim | 点集扩张 | 稠密图、从某点开始扩张 |
-| Kruskal | 按边排序 | 稀疏图、边列表输入 |
-
-Python 刷题里，Kruskal + 并查集非常常用，因为很多题直接给边列表。
-
-## 常见错法
-
-错误 1：有向图上套 MST。最小生成树通常是无向图概念。
-
-错误 2：Kruskal 不判断成环，最后得到的不是树。
-
-错误 3：图不连通时仍然返回 total。必须检查 used == n - 1 或 count == n。
-
-## 题目信号
-
-- “连接所有城市的最小成本”。
-- “铺设光缆/道路/管道”。
-- “保留一些边使得所有点连通且总代价最小”。
-
-## 验收练习
-
-1. 手写并查集 find 路径压缩过程。
-2. 用 Kruskal 求 5 个点的 MST 总权值。
-3. 解释为什么 MST 有 n - 1 条边。
+| 算法 | 常见实现 | 复杂度 |
+|---|---|---:|
+| Prim 邻接矩阵 | 扫描最小 lowcost | O(V^2) |
+| Prim 邻接表 + 堆 | 优先队列 | O(E log V) |
+| Kruskal | 排序 + 并查集 | O(E log E) |
