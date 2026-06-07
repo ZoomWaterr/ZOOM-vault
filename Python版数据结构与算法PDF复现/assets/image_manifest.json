@@ -1,0 +1,786 @@
+[
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 5,
+    "image_index": 1,
+    "original_name": "X95.png",
+    "path": "assets/algorithm/algorithm_p005_01.png",
+    "bytes": 46564
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 6,
+    "image_index": 1,
+    "original_name": "X104.png",
+    "path": "assets/algorithm/algorithm_p006_01.png",
+    "bytes": 201351
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 6,
+    "image_index": 2,
+    "original_name": "X105.png",
+    "path": "assets/algorithm/algorithm_p006_02.png",
+    "bytes": 249591
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 7,
+    "image_index": 1,
+    "original_name": "X108.png",
+    "path": "assets/algorithm/algorithm_p007_01.png",
+    "bytes": 133698
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 7,
+    "image_index": 2,
+    "original_name": "X109.png",
+    "path": "assets/algorithm/algorithm_p007_02.png",
+    "bytes": 141608
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 9,
+    "image_index": 1,
+    "original_name": "X116.png",
+    "path": "assets/algorithm/algorithm_p009_01.png",
+    "bytes": 81251
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 11,
+    "image_index": 1,
+    "original_name": "X124.png",
+    "path": "assets/algorithm/algorithm_p011_01.png",
+    "bytes": 149303
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 13,
+    "image_index": 1,
+    "original_name": "X135.png",
+    "path": "assets/algorithm/algorithm_p013_01.png",
+    "bytes": 152019
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 15,
+    "image_index": 1,
+    "original_name": "X143.png",
+    "path": "assets/algorithm/algorithm_p015_01.png",
+    "bytes": 105775
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 15,
+    "image_index": 2,
+    "original_name": "X144.png",
+    "path": "assets/algorithm/algorithm_p015_02.png",
+    "bytes": 209627
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 16,
+    "image_index": 1,
+    "original_name": "X148.png",
+    "path": "assets/algorithm/algorithm_p016_01.png",
+    "bytes": 249909
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 16,
+    "image_index": 2,
+    "original_name": "X149.png",
+    "path": "assets/algorithm/algorithm_p016_02.png",
+    "bytes": 194497
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 16,
+    "image_index": 3,
+    "original_name": "X150.png",
+    "path": "assets/algorithm/algorithm_p016_03.png",
+    "bytes": 50584
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 18,
+    "image_index": 1,
+    "original_name": "X155.png",
+    "path": "assets/algorithm/algorithm_p018_01.png",
+    "bytes": 81621
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 19,
+    "image_index": 1,
+    "original_name": "X159.png",
+    "path": "assets/algorithm/algorithm_p019_01.png",
+    "bytes": 82566
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 19,
+    "image_index": 2,
+    "original_name": "X160.png",
+    "path": "assets/algorithm/algorithm_p019_02.png",
+    "bytes": 354098
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 20,
+    "image_index": 1,
+    "original_name": "X164.png",
+    "path": "assets/algorithm/algorithm_p020_01.png",
+    "bytes": 482453
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 20,
+    "image_index": 2,
+    "original_name": "X165.png",
+    "path": "assets/algorithm/algorithm_p020_02.png",
+    "bytes": 274920
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 21,
+    "image_index": 1,
+    "original_name": "X169.png",
+    "path": "assets/algorithm/algorithm_p021_01.png",
+    "bytes": 503543
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 21,
+    "image_index": 2,
+    "original_name": "X170.png",
+    "path": "assets/algorithm/algorithm_p021_02.png",
+    "bytes": 496442
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 22,
+    "image_index": 1,
+    "original_name": "X174.png",
+    "path": "assets/algorithm/algorithm_p022_01.png",
+    "bytes": 442558
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 23,
+    "image_index": 1,
+    "original_name": "X177.png",
+    "path": "assets/algorithm/algorithm_p023_01.png",
+    "bytes": 484315
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 23,
+    "image_index": 2,
+    "original_name": "X178.png",
+    "path": "assets/algorithm/algorithm_p023_02.png",
+    "bytes": 433233
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 24,
+    "image_index": 1,
+    "original_name": "X182.png",
+    "path": "assets/algorithm/algorithm_p024_01.png",
+    "bytes": 485883
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 25,
+    "image_index": 1,
+    "original_name": "X185.png",
+    "path": "assets/algorithm/algorithm_p025_01.png",
+    "bytes": 538103
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 29,
+    "image_index": 1,
+    "original_name": "X200.png",
+    "path": "assets/algorithm/algorithm_p029_01.png",
+    "bytes": 18839
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 31,
+    "image_index": 1,
+    "original_name": "X209.png",
+    "path": "assets/algorithm/algorithm_p031_01.png",
+    "bytes": 131788
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 40,
+    "image_index": 1,
+    "original_name": "X239.png",
+    "path": "assets/algorithm/algorithm_p040_01.png",
+    "bytes": 292114
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 41,
+    "image_index": 1,
+    "original_name": "X242.png",
+    "path": "assets/algorithm/algorithm_p041_01.png",
+    "bytes": 190958
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 43,
+    "image_index": 1,
+    "original_name": "X248.png",
+    "path": "assets/algorithm/algorithm_p043_01.png",
+    "bytes": 69677
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 45,
+    "image_index": 1,
+    "original_name": "X260.png",
+    "path": "assets/algorithm/algorithm_p045_01.png",
+    "bytes": 270409
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 46,
+    "image_index": 1,
+    "original_name": "X265.png",
+    "path": "assets/algorithm/algorithm_p046_01.png",
+    "bytes": 72815
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 47,
+    "image_index": 1,
+    "original_name": "X269.png",
+    "path": "assets/algorithm/algorithm_p047_01.png",
+    "bytes": 54394
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 48,
+    "image_index": 1,
+    "original_name": "X276.png",
+    "path": "assets/algorithm/algorithm_p048_01.png",
+    "bytes": 121347
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 48,
+    "image_index": 2,
+    "original_name": "X277.png",
+    "path": "assets/algorithm/algorithm_p048_02.png",
+    "bytes": 41507
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 48,
+    "image_index": 3,
+    "original_name": "X278.png",
+    "path": "assets/algorithm/algorithm_p048_03.png",
+    "bytes": 168235
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 48,
+    "image_index": 4,
+    "original_name": "X279.png",
+    "path": "assets/algorithm/algorithm_p048_04.png",
+    "bytes": 54738
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 48,
+    "image_index": 5,
+    "original_name": "X280.png",
+    "path": "assets/algorithm/algorithm_p048_05.png",
+    "bytes": 205019
+  },
+  {
+    "pdf": "Algorithm.pdf",
+    "page": 48,
+    "image_index": 6,
+    "original_name": "X281.png",
+    "path": "assets/algorithm/algorithm_p048_06.png",
+    "bytes": 43389
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 9,
+    "image_index": 1,
+    "original_name": "X214.png",
+    "path": "assets/data_structure/data_structure_p009_01.png",
+    "bytes": 68892
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 11,
+    "image_index": 1,
+    "original_name": "X226.png",
+    "path": "assets/data_structure/data_structure_p011_01.png",
+    "bytes": 36425
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 11,
+    "image_index": 2,
+    "original_name": "X228.png",
+    "path": "assets/data_structure/data_structure_p011_02.png",
+    "bytes": 54760
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 11,
+    "image_index": 3,
+    "original_name": "X229.png",
+    "path": "assets/data_structure/data_structure_p011_03.png",
+    "bytes": 26249
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 12,
+    "image_index": 1,
+    "original_name": "X233.png",
+    "path": "assets/data_structure/data_structure_p012_01.png",
+    "bytes": 64545
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 14,
+    "image_index": 1,
+    "original_name": "X241.png",
+    "path": "assets/data_structure/data_structure_p014_01.png",
+    "bytes": 53953
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 19,
+    "image_index": 1,
+    "original_name": "X262.png",
+    "path": "assets/data_structure/data_structure_p019_01.png",
+    "bytes": 359878
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 20,
+    "image_index": 1,
+    "original_name": "X265.png",
+    "path": "assets/data_structure/data_structure_p020_01.png",
+    "bytes": 119481
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 21,
+    "image_index": 1,
+    "original_name": "X271.png",
+    "path": "assets/data_structure/data_structure_p021_01.png",
+    "bytes": 110984
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 23,
+    "image_index": 1,
+    "original_name": "X281.png",
+    "path": "assets/data_structure/data_structure_p023_01.png",
+    "bytes": 48807
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 24,
+    "image_index": 1,
+    "original_name": "X288.png",
+    "path": "assets/data_structure/data_structure_p024_01.png",
+    "bytes": 34395
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 26,
+    "image_index": 1,
+    "original_name": "X297.png",
+    "path": "assets/data_structure/data_structure_p026_01.png",
+    "bytes": 285280
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 27,
+    "image_index": 1,
+    "original_name": "X302.png",
+    "path": "assets/data_structure/data_structure_p027_01.png",
+    "bytes": 170440
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 27,
+    "image_index": 2,
+    "original_name": "X303.png",
+    "path": "assets/data_structure/data_structure_p027_02.png",
+    "bytes": 81023
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 29,
+    "image_index": 1,
+    "original_name": "X313.png",
+    "path": "assets/data_structure/data_structure_p029_01.png",
+    "bytes": 39608
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 30,
+    "image_index": 1,
+    "original_name": "X318.png",
+    "path": "assets/data_structure/data_structure_p030_01.png",
+    "bytes": 179393
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 33,
+    "image_index": 1,
+    "original_name": "X331.png",
+    "path": "assets/data_structure/data_structure_p033_01.png",
+    "bytes": 221499
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 38,
+    "image_index": 1,
+    "original_name": "X347.png",
+    "path": "assets/data_structure/data_structure_p038_01.png",
+    "bytes": 43757
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 38,
+    "image_index": 2,
+    "original_name": "X348.png",
+    "path": "assets/data_structure/data_structure_p038_02.png",
+    "bytes": 125858
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 39,
+    "image_index": 1,
+    "original_name": "X352.png",
+    "path": "assets/data_structure/data_structure_p039_01.png",
+    "bytes": 317369
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 42,
+    "image_index": 1,
+    "original_name": "X360.png",
+    "path": "assets/data_structure/data_structure_p042_01.png",
+    "bytes": 672316
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 44,
+    "image_index": 1,
+    "original_name": "X369.png",
+    "path": "assets/data_structure/data_structure_p044_01.png",
+    "bytes": 106273
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 45,
+    "image_index": 1,
+    "original_name": "X376.png",
+    "path": "assets/data_structure/data_structure_p045_01.png",
+    "bytes": 364744
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 46,
+    "image_index": 1,
+    "original_name": "X380.png",
+    "path": "assets/data_structure/data_structure_p046_01.png",
+    "bytes": 183945
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 48,
+    "image_index": 1,
+    "original_name": "X390.png",
+    "path": "assets/data_structure/data_structure_p048_01.png",
+    "bytes": 203928
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 52,
+    "image_index": 1,
+    "original_name": "X406.png",
+    "path": "assets/data_structure/data_structure_p052_01.png",
+    "bytes": 314792
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 53,
+    "image_index": 1,
+    "original_name": "X413.png",
+    "path": "assets/data_structure/data_structure_p053_01.png",
+    "bytes": 131367
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 54,
+    "image_index": 1,
+    "original_name": "X417.png",
+    "path": "assets/data_structure/data_structure_p054_01.png",
+    "bytes": 340087
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 54,
+    "image_index": 2,
+    "original_name": "X418.png",
+    "path": "assets/data_structure/data_structure_p054_02.png",
+    "bytes": 119081
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 55,
+    "image_index": 1,
+    "original_name": "X424.png",
+    "path": "assets/data_structure/data_structure_p055_01.png",
+    "bytes": 578920
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 55,
+    "image_index": 2,
+    "original_name": "X425.png",
+    "path": "assets/data_structure/data_structure_p055_02.png",
+    "bytes": 883308
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 55,
+    "image_index": 3,
+    "original_name": "X426.png",
+    "path": "assets/data_structure/data_structure_p055_03.png",
+    "bytes": 758782
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 56,
+    "image_index": 1,
+    "original_name": "X432.png",
+    "path": "assets/data_structure/data_structure_p056_01.png",
+    "bytes": 676337
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 56,
+    "image_index": 2,
+    "original_name": "X433.png",
+    "path": "assets/data_structure/data_structure_p056_02.png",
+    "bytes": 60236
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 57,
+    "image_index": 1,
+    "original_name": "X440.png",
+    "path": "assets/data_structure/data_structure_p057_01.png",
+    "bytes": 589092
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 58,
+    "image_index": 1,
+    "original_name": "X445.png",
+    "path": "assets/data_structure/data_structure_p058_01.png",
+    "bytes": 60479
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 58,
+    "image_index": 2,
+    "original_name": "X446.png",
+    "path": "assets/data_structure/data_structure_p058_02.png",
+    "bytes": 73412
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 62,
+    "image_index": 1,
+    "original_name": "X461.png",
+    "path": "assets/data_structure/data_structure_p062_01.png",
+    "bytes": 116660
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 63,
+    "image_index": 1,
+    "original_name": "X464.png",
+    "path": "assets/data_structure/data_structure_p063_01.png",
+    "bytes": 100040
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 65,
+    "image_index": 1,
+    "original_name": "X478.png",
+    "path": "assets/data_structure/data_structure_p065_01.png",
+    "bytes": 180775
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 65,
+    "image_index": 2,
+    "original_name": "X479.png",
+    "path": "assets/data_structure/data_structure_p065_02.png",
+    "bytes": 52293
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 65,
+    "image_index": 3,
+    "original_name": "X480.png",
+    "path": "assets/data_structure/data_structure_p065_03.png",
+    "bytes": 48595
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 66,
+    "image_index": 1,
+    "original_name": "X487.png",
+    "path": "assets/data_structure/data_structure_p066_01.png",
+    "bytes": 49104
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 66,
+    "image_index": 2,
+    "original_name": "X488.png",
+    "path": "assets/data_structure/data_structure_p066_02.png",
+    "bytes": 39420
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 69,
+    "image_index": 1,
+    "original_name": "X501.png",
+    "path": "assets/data_structure/data_structure_p069_01.png",
+    "bytes": 29663
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 69,
+    "image_index": 2,
+    "original_name": "X502.png",
+    "path": "assets/data_structure/data_structure_p069_02.png",
+    "bytes": 100561
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 70,
+    "image_index": 1,
+    "original_name": "X507.png",
+    "path": "assets/data_structure/data_structure_p070_01.png",
+    "bytes": 730720
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 72,
+    "image_index": 1,
+    "original_name": "X516.png",
+    "path": "assets/data_structure/data_structure_p072_01.png",
+    "bytes": 94575
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 72,
+    "image_index": 2,
+    "original_name": "X517.png",
+    "path": "assets/data_structure/data_structure_p072_02.png",
+    "bytes": 262628
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 73,
+    "image_index": 1,
+    "original_name": "X522.png",
+    "path": "assets/data_structure/data_structure_p073_01.png",
+    "bytes": 28206
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 73,
+    "image_index": 2,
+    "original_name": "X523.png",
+    "path": "assets/data_structure/data_structure_p073_02.png",
+    "bytes": 295462
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 74,
+    "image_index": 1,
+    "original_name": "X527.png",
+    "path": "assets/data_structure/data_structure_p074_01.png",
+    "bytes": 194024
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 74,
+    "image_index": 2,
+    "original_name": "X528.png",
+    "path": "assets/data_structure/data_structure_p074_02.png",
+    "bytes": 387454
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 77,
+    "image_index": 1,
+    "original_name": "X539.png",
+    "path": "assets/data_structure/data_structure_p077_01.png",
+    "bytes": 432274
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 80,
+    "image_index": 1,
+    "original_name": "X551.png",
+    "path": "assets/data_structure/data_structure_p080_01.png",
+    "bytes": 434091
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 88,
+    "image_index": 1,
+    "original_name": "X577.png",
+    "path": "assets/data_structure/data_structure_p088_01.png",
+    "bytes": 562823
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 92,
+    "image_index": 1,
+    "original_name": "X591.png",
+    "path": "assets/data_structure/data_structure_p092_01.png",
+    "bytes": 436253
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 94,
+    "image_index": 1,
+    "original_name": "X601.png",
+    "path": "assets/data_structure/data_structure_p094_01.png",
+    "bytes": 114814
+  },
+  {
+    "pdf": "DataStructure.pdf",
+    "page": 95,
+    "image_index": 1,
+    "original_name": "X605.png",
+    "path": "assets/data_structure/data_structure_p095_01.png",
+    "bytes": 866797
+  }
+]
